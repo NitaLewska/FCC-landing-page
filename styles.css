@@ -1,0 +1,147 @@
+/* Box Model Fix */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+main img {
+    width:auto;
+    height: 300px;
+    justify-self: center;
+}
+
+header {
+    height: 100px;
+    background-color: #161616;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    padding: 0 100px;
+}
+
+#header-img {
+    height: 80px;
+    background-color:rgb(190, 252, 175);
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-link {
+    margin: 0 10px;
+}
+
+#nav-bar a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+
+h1, h2 {
+    font-family: 'Allison', cursive;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section p {
+    width:80%;
+}
+
+#about {
+    grid-template-columns: auto;
+    margin: 50px 200px;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+    padding: 0%;
+    font-size:
+}
+
+#about p {
+    width: 100%;
+}
+
+#vids {
+    grid-column: 1/3; 
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height:max-content;
+    margin-top: 50px;
+}
+
+#vids iframe {
+    width:30%;
+}
+
+#contacts {
+justify-content: center;
+align-items:center;
+grid-template-columns: 1fr;
+}
+
+@media(max-width: 1280px) {
+
+    main{
+        max-width: 780px;  
+    }
+
+    #vids {
+        flex-direction: column; 
+        gap: 40px;
+    }
+
+    #vids iframe {
+        width: 780px;
+        height: 500px;
+    }
+
+}
+
+@media(max-width: 800px) {
+
+    main{
+        margin: 0 auto;
+        width:80%;
+        grid-template-columns: 1fr;
+        max-width: 400px;   
+    }
+
+    #vids {
+        grid-column: 1/2; 
+    }
+
+    #contacts {
+        grid-column: 1/2;
+    }
+}
+
+
